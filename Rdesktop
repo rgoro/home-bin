@@ -1,0 +1,1 @@
+rdesktop -uAdministrator -g1024x768 -T"$2" -p -  $1

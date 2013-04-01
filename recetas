@@ -1,0 +1,114 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+my $sleep = 1;
+if( $#ARGV > -1 && $ARGV[0] >= 0)
+	{$sleep = $ARGV[0];}
+
+print "¿Qué comemos de rico????\n";
+
+sleep $sleep;
+
+my @ingredientes = qw<Zapallo Bacalao Rana Gallina Cerdo Caracoles Lomo>;
+push @ingredientes, qw<Lechuga Choclo Cebolla Langostinos Chocolate Tomate Papa>;
+push @ingredientes, qw<Escarola Palmitos Arroz Almendras Longaniza Arvejas Fideos>;
+push @ingredientes, qw<Batata Carne Pollo Lentejas Queso Caramelos Zanahoria Pato>;
+push @ingredientes, qw<Chorizo Salchichas Porotos Pollo Trillas Merluza>;
+
+my @recetas_de = qw<Guiso Pizza Ensalada Filet Escalopes Sopa Revuelto>;
+push @recetas_de, qw<Ñoquis Ravioles Pastel Salpicón Curry Empanadas Salsa>;
+push @recetas_de, qw<Torta Tarta Canelones Lasagna Capelletis Crema>;
+
+my @recetas_al = qw<Plato Horno Cuadrado Escabeche Tuco Pesto>;
+push @recetas_al, qw<Vino Oporto Curry Marsala Whisky>;
+push @recetas_al, "Tuco y Pesto";
+
+my @recetas_ala = qw<Cacerola Plancha Parrilla Pomarola Pimienta Sal Crema>;
+push @recetas_ala, qw<Piamontesa Provenzal Cerveza Naranja>;
+
+my @recetas_listas = ("Fideos Con Manteca", "Pastel de Papas");
+push @recetas_listas, ("Pollo al Horno con Papas", "Asado");
+push @recetas_listas, ("Huevos Fritos", "Huevos Con Salsa");
+push @recetas_listas, ("Pulparindo!");
+
+my @condimentos = qw<Perejil Arroz Zapallo Cebolla Papas Almendras>;
+push @condimentos, qw<Pan Morrón Aceite Aceitunas Manteca Oregano Condipizza>;
+push @condimentos, qw<Romero Laurel Chile Curry Café Miel Sal Vino Oporto Marsala>;
+push @condimentos, ("Salsa Blanca", "Salsa de Tomate");
+
+my $receta;
+my $i;
+my $tope;
+my $dado;
+
+#Veamos si mando una receta_lista o construyo una
+$dado = int rand(100);
+
+if ($dado < 10)
+{
+	$i = int rand($#recetas_listas);
+	$receta = $recetas_listas[$i];
+} else {
+	#Vemos si empiezo con un ingrediente o con un algo.
+	#Vamos a hacerlo proporcionalmente
+	$dado = int rand($#recetas_de + $#recetas_al + $#recetas_ala);
+
+
+	if ($dado <= $#recetas_de) {
+		$i = int rand($#recetas_de);
+		$receta .= "$recetas_de[$i] de ";
+		$i = int rand($#ingredientes);
+		$receta .= "$ingredientes[$i] ";
+
+		#ahora vamos a ver si ponemos un (al|ala)
+		$dado = int rand(100);
+		if ($dado < 30) {
+			$dado = int rand($#recetas_al + $#recetas_ala);
+			if ($dado <= $#recetas_al) {
+				$i = int rand($#recetas_al);
+				$receta .= "al $recetas_al[$i] ";
+			} else {
+				$i = int rand($#recetas_ala);
+				$receta .= "a la $recetas_ala[$i] ";
+			} 
+		} 
+	} else {
+		$i = int rand($#ingredientes);
+		$receta .= "$ingredientes[$i] ";
+		
+		# veamos (al|ala) qué
+		$dado = int rand($#recetas_al + $#recetas_ala);
+		if ($dado <= $#recetas_al) {
+			$i = int rand($#recetas_al);
+			$receta .= "al $recetas_al[$i] ";
+		} else {
+			$i = int rand($#recetas_ala);
+			$receta .= "a la $recetas_ala[$i] ";
+		} 
+	}
+
+	# ahora condimentamos
+	$i = int rand($#condimentos);
+	my $con = "con";
+	# Se nos puede ocurrir hacer recetas sin algo en vez de con...
+	$dado = int rand(100);
+	if ($dado < 20)
+		{$con = "sin";}
+	
+	$receta .= "$con $condimentos[$i] ";
+
+	# ¿condimentamos de nuevo?
+	$dado = int rand(100);
+	if ($dado < 25) {
+		my $y = "y";
+		if ($con eq "sin")
+			{$y = "ni";}
+
+		$i = int rand($#condimentos);
+		$receta .= "$y $condimentos[$i] ";
+	}
+}
+	
+print "$receta\n";

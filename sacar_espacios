@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+
+use strict;
+use File::Copy;
+use Shell "ls";
+
+my @todoarchivo = ls();
+my $cambiados = 0;
+
+for (@todoarchivo)
+{
+	chomp;
+	my $i = $_;
+	my $j = $i;
+	$j =~ s/ /./g;
+	$j =~ s/^-{1,}//g;
+	$j =~ s/(\(|\))/_/g;
+	$j =~ s/#//g;
+	$j =~ s/'//g;
+	$j =~ s/\\//g;
+ 	if ($i ne $j)
+	{
+		move("./$i" ,"./$j");
+		$cambiados++;
+	}
+}
+
+if ($cambiados == 1)
+	{print "Cambio $cambiados archivo\n";}
+elsif ($cambiados > 1)
+	{print "Cambiaron $cambiados archivos\n";}
+
