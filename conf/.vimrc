@@ -97,7 +97,7 @@ autocmd FileType tex  map! ñ ~n
 autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2>
 autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>
 autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType python map <F2> :w<CR> :!python -c "import %"<CR>| map! <F2> <Esc> <F2>
+autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2>
 
 map ; $a;<ESC>
 
