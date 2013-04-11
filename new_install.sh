@@ -6,7 +6,7 @@ sudo apt-get dist-upgrade -y
 
 sudo apt-get autoremove -y
 
-sudo apt-get install -y vim vim-gtk chromium-browser calibre yakuake skype git youtube-dl ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended vim-latexsuite exuberant-ctags
+sudo apt-get install -y vim vim-gtk chromium-browser calibre yakuake skype git youtube-dl ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended vim-latexsuite exuberant-ctags lame easytag
 
 if [ ! -d ~/bin ]; then
 	cd ~
