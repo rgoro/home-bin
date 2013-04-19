@@ -13,7 +13,11 @@ if [ ! -d ~/bin ]; then
 	git clone https://github.com/rgoro/home-bin.git bin
 fi
 
-cd ~/bin
+cd ~
 
-cp conf/.* ~  
+for i in bin/conf/.*; do
+	 if [ ! -d "$i" ]; then 
+		ln -s "$i" .
+	fi
+done
 
