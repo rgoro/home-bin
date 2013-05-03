@@ -32,6 +32,9 @@ syntax on
 " turn on this option as well
 set background=dark
 
+set wildmenu
+set wildmode=longest:full
+
 if has("autocmd")
  " Enabled file type detection
  " Use the default filetype settings. If you also want to load indent files
