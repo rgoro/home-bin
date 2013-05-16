@@ -8,6 +8,9 @@ sudo apt-get autoremove -y
 
 sudo apt-get install -y vim vim-gtk chromium-browser calibre yakuake skype git youtube-dl ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended vim-latexsuite exuberant-ctags lame easytag subversion
 
+#Activar el addon
+vim-addons install latex-suite
+
 #INRIA
 sudo apt-get install -y g++ libjsoncpp-dev
 
