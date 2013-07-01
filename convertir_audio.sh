@@ -11,6 +11,7 @@ BITRATE=128
 while true; do
 	case "$1" in
 		-h) echo "Uso: $0 [-h | -f <ogg|wma|wav|m4a|flac> -b <bitrate>]"
+			echo "Convierte todos los archivos del directorio"
 			exit 0
 			;;
 		-f) FORMAT="$2"
