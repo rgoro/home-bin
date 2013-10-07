@@ -5,7 +5,7 @@ TEMP=`getopt -o hf:b: -n $0 -- "$@"`
 
 eval set -- "$TEMP"
 
-FORMAT=ogg
+FORMAT=flac
 BITRATE=128
 
 while true; do
