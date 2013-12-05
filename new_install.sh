@@ -6,13 +6,13 @@ sudo apt-get dist-upgrade -y
 
 sudo apt-get autoremove -y
 
-sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git youtube-dl ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra vim-latexsuite exuberant-ctags lame easytag subversion hugin
+sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git youtube-dl ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra vim-latexsuite exuberant-ctags lame easytag subversion hugin tidy
 
 #Activar el addon
 vim-addons install latex-suite
 
 #INRIA
-sudo apt-get install -y g++ libjsoncpp-dev
+#sudo apt-get install -y g++ libjsoncpp-dev
 
 if [ ! -d ~/bin ]; then
 	cd ~
