@@ -6,7 +6,11 @@ sudo apt-get dist-upgrade -y
 
 sudo apt-get autoremove -y
 
-sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git youtube-dl ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra vim-latexsuite exuberant-ctags lame easytag subversion hugin tidy vim-addon-manager
+#Basicos
+sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra vim-latexsuite exuberant-ctags subversion tidy vim-addon-manager
+
+# Solo para casa
+# sudo apt-get install youtube-dl lame easytag hugin mplayer
 
 #Activar el addon
 vim-addons install latex-suite
@@ -19,7 +23,6 @@ if [ ! -d ~/bin ]; then
 	git clone https://github.com/rgoro/home-bin.git bin
 fi
 
-#Debería agregar los comandos de git para agregar los aliases
 git config --global user.email "rgorojovsky@gmail.com"
 git config --global user.name "Román Gorojovsky Sánchez"
 git config --global alias.ci commit
