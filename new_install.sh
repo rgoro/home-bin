@@ -18,6 +18,9 @@ vim-addons install latex-suite
 #INRIA
 #sudo apt-get install -y g++ libjsoncpp-dev
 
+#Audio para skype
+#sudo apt-get install -y libasound2-plugins:i386
+
 if [ ! -d ~/bin ]; then
 	cd ~
 	git clone https://github.com/rgoro/home-bin.git bin
