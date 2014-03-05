@@ -29,10 +29,9 @@ if [ ! -d ~/bin ]; then
 	git clone https://github.com/rgoro/home-bin.git bin
 fi
 
-git config --global user.email "rgorojovsky@gmail.com"
-git config --global user.name "Román Gorojovsky Sánchez"
+git config --global user.email "roman@monarlab.com"
+git config --global user.name "Román Gorojovsky"
 git config --global alias.ci commit
-
 
 cd ~
 
