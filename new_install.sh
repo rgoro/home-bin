@@ -7,7 +7,7 @@ sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
 
 #Basicos
-sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite exuberant-ctags subversion tidy vim-addon-manager
+sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite exuberant-ctags subversion tidy vim-addon-manager mc 
 
 # Solo para casa
 # sudo apt-get install youtube-dl lame easytag hugin mplayer
