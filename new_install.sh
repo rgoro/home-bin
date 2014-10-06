@@ -7,19 +7,22 @@ sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
 
 #Basicos
-sudo apt-get install -y sl vim vim-gtk chromium-browser calibre yakuake skype git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite exuberant-ctags subversion tidy vim-addon-manager mc 
+sudo apt-get install -y sl vim vim-gtk chromium-browser git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra  exuberant-ctags subversion tidy vim-addon-manager mc
+
+#Basicos II
+#sudo apt-get install yakuake texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite 
 
 # Solo para casa
-# sudo apt-get install youtube-dl lame easytag hugin mplayer
+# sudo apt-get install youtube-dl lame easytag hugin mplayer calibre 
 
 #Activar el addon
-vim-addons install latex-suite
+#vim-addons install latex-suite
 
 #INRIA
 #sudo apt-get install -y g++ libjsoncpp-dev
 
-#Audio para skype
-#sudo apt-get install -y libasound2-plugins:i386
+#Skype
+#sudo apt-get install -y skype libasound2-plugins:i386
 
 if [ ! -d ~/bin ]; then
 	cd ~
