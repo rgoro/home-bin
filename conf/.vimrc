@@ -73,10 +73,8 @@ set shiftwidth=4
 set nowrapscan
 set nu
 
-"La inversa de J
-map <C-J> i<CR><ESC>k$
-
-autocmd FileType c,cpp,php,javascript,perl set cindent |set foldmethod=syntax
+autocmd FileType c,cpp,javascript,perl set cindent |set foldmethod=syntax
+autocmd FileType php set cindent |set foldmethod=indent
 
 autocmd FileType haskell set textwidth=90
 
