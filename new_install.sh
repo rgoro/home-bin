@@ -33,6 +33,18 @@ git config --global user.email "rgorojovsky@gmail.com"
 git config --global user.name "Román Gorojovsky Sánchez"
 git config --global alias.ci commit
 
+#Node.js y JsHint
+#sudo apt-get install npm
+#sudo ln -s /usr/bin/nodejs /usr/bin/node
+#sudo npm install -g jshint
+#
+#if ![ -d ~/.vim/bundle ]; then
+#	mkdir ~/.vim/bundle
+#fi
+#
+#cd ~/.vim/bundle/
+#git clone https://github.com/Shutnik/jshint2.vim.git
+
 
 cd ~
 
