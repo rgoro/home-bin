@@ -84,16 +84,6 @@ autocmd FileType perl6 source ~/.vim/perl6.vim
 autocmd FileType asm set tabstop=8 "| set filetype=nasm
 autocmd FileType tex set textwidth=100
  
-"comandos para compilar latex
-"¿Obsoletos desde que uso vim-latex ?
-"autocmd FileType tex  map <F2> :w<CR> :!pdflatex % <CR>| map! <F2> <Esc> <F2>
-"autocmd FileType tex  map <F3> :! evince *.pdf 2>/dev/null&<CR>| map! <F3> <Esc> <F3>
-"autocmd FileType tex  map <F3> :w<CR> :!NEW=%;NEWFILE=`echo $NEW \| sed 's/tex/pdf/g;'`; pdflatex $NEW && evince $NEWFILE <CR>| map! <F3><Esc> <F3>
-"autocmd FileType tex  map! á 'a
-"autocmd FileType tex  map! í 'i
-"autocmd FileType tex  map! ó 'o
-"autocmd FileType tex  map! ú 'u
-"autocmd FileType tex  map! ñ ~n
 
 autocmd FileType tex set textwidth=100
 
