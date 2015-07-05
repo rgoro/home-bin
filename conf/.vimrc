@@ -1,5 +1,4 @@
 " Configuration file for vim
-"set runtimepath=~/.vim,/etc/vim,/usr/share/vim/vimcurrent/vimfiles,/usr/share/vim/vimcurrent/addons,/usr/share/vim/vimcurrent/vimfiles,/usr/share/vim/vimcurrent/addons/after,~/.vim/after
 
 set runtimepath+=~/.vim/bundle/jshint2.vim/
 
@@ -61,8 +60,6 @@ endtry
 " different from regular vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
-"set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 
 " Source a global configuration file if available
@@ -82,7 +79,6 @@ autocmd FileType haskell set textwidth=90
 
 autocmd BufNewFile,BufRead *.p6 setf perl6
 autocmd FileType perl6 source ~/.vim/perl6.vim
-"autocmd FileType html,php source ~/.vim/html_dead.vim
 autocmd FileType asm set tabstop=8 "| set filetype=nasm
 autocmd FileType tex set textwidth=100
  
@@ -90,14 +86,13 @@ autocmd FileType tex set textwidth=100
 autocmd FileType tex set textwidth=100
 
 "otras compilaciones (chequeos de sintáxis sólamente)
-autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2>
+autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2> | map ; $a;<ESC>
+autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>| map ; $a;<ESC>
+autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2> | map ; $a;<ESC>
+autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2> | map X :%s/	/    /g<CR>:w | map : $a:<ESC>
 autocmd FileType html map <F2> :w<CR> :! tidy -e -utf8 %<CR>| map! <F2> <ESC><F2>
-autocmd FileType javascript map <F2> :w<CR> :JSHint<CR> | map! <F2> <ESC><F2>
+autocmd FileType javascript map <F2> :w<CR> :JSHint<CR> | map! <F2> <ESC><F2> | map ; $a;<ESC>
 
-map ; $a;<ESC>
 
 " helptags ~/.vim/doc
 
