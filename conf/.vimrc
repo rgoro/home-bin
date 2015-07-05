@@ -89,7 +89,7 @@ autocmd FileType tex set textwidth=100
 autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2> | map ; $a;<ESC>
 autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>| map ; $a;<ESC>
 autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2> | map ; $a;<ESC>
-autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2> | map X :%s/	/    /g<CR>:w | map : $a:<ESC>
+autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2> | map X :%s/	/    /g<CR>:w
 autocmd FileType html map <F2> :w<CR> :! tidy -e -utf8 %<CR>| map! <F2> <ESC><F2>
 autocmd FileType javascript map <F2> :w<CR> :JSHint<CR> | map! <F2> <ESC><F2> | map ; $a;<ESC>
 
