@@ -14,5 +14,4 @@ for i in $(seq $START $END); do
 	FILES="$FILES IMG_$i.JPG"
 done
 
-hugin $FILES &
- &
+hugin $FILES
