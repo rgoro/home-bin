@@ -86,13 +86,12 @@ autocmd FileType tex set textwidth=100
 autocmd FileType tex set textwidth=100
 
 "otras compilaciones (chequeos de sintáxis sólamente)
-autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2> | map ; $a;<ESC>
-autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>| map ; $a;<ESC>
-autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2> | map ; $a;<ESC>
-autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2> | map X :%s/	/    /g<CR>:w
+autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2>
+autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>
+autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2>
+autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2>
 autocmd FileType html map <F2> :w<CR> :! tidy -e -utf8 %<CR>| map! <F2> <ESC><F2>
-autocmd FileType javascript map <F2> :w<CR> :JSHint<CR> | map! <F2> <ESC><F2> | map ; $a;<ESC>
-
+autocmd FileType javascript map <F2> :w<CR> :JSHint<CR> | map! <F2> <ESC><F2>
 
 " helptags ~/.vim/doc
 
@@ -100,3 +99,5 @@ set nocp
 
 set splitright
 map <C-F12> :!ctags-exuberant -R .<CR>
+
+autocmd FileType python map X :%s/	/    /g<CR>:w<CR>
