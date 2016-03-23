@@ -32,6 +32,7 @@ fi
 git config --global user.email "rgorojovsky@gmail.com"
 git config --global user.name "Román Gorojovsky Sánchez"
 git config --global alias.ci commit
+git config --global alias.st status
 
 #Node.js y JsHint
 #sudo apt-get install npm
