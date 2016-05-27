@@ -69,6 +69,7 @@ endif
 set cinwords=if,else,elseif,while,switch,case,for,do
 set tabstop=4
 set shiftwidth=4
+set nowrap
 set nowrapscan
 set nu
 
