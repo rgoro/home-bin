@@ -35,7 +35,7 @@ git config --global alias.ci commit
 git config --global alias.st status
 
 #Node.js y JsHint
-#sudo apt-get install npm
+#sudo apt-get install npm -y
 #sudo ln -s /usr/bin/nodejs /usr/bin/node
 #sudo npm install -g jshint
 #
