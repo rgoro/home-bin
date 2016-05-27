@@ -7,13 +7,13 @@ sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
 
 #Basicos
-sudo apt-get install -y sl vim vim-gtk chromium-browser git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra  exuberant-ctags subversion tidy vim-addon-manager mc compizconfig-settings-manager banshee
+sudo apt-get install -y sl vim vim-gtk yakuake chromium-browser git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra multitail exuberant-ctags tidy vim-addon-manager mc compizconfig-settings-manager
 
 #Basicos II
-#sudo apt-get install -y yakuake texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite 
+#sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite subversion
 
 # Solo para casa
-# sudo apt-get install -y youtube-dl lame easytag hugin mplayer calibre 
+# sudo apt-get install -y youtube-dl lame easytag hugin mplayer calibre banshee
 
 #Activar el addon
 #vim-addons install latex-suite
