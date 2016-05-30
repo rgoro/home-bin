@@ -87,12 +87,12 @@ autocmd FileType tex set textwidth=100
 autocmd FileType tex set textwidth=100
 
 "otras compilaciones (chequeos de sintáxis sólamente)
-autocmd FileType c,cpp map <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType php map <F2> :w<CR> :!php -l  %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType perl map <F2> :w<CR> :!perl -c -w %<CR>| map! <F2> <Esc> <F2>
-autocmd FileType python map <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <F2> <Esc> <F2>
-autocmd FileType html map <F2> :w<CR> :! tidy -e -utf8 %<CR>| map! <F2> <ESC><F2>
-autocmd FileType javascript map <F2> :w<CR> :JSHint<CR> | map! <F2> <ESC><F2>
+autocmd FileType c,cpp map <buffer> <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <buffer> <F2> <Esc> <F2>
+autocmd FileType php map <buffer> <F2> :w<CR> :!php -l  %<CR>| map! <buffer> <F2> <Esc> <F2>
+autocmd FileType perl map <buffer> <F2> :w<CR> :!perl -c -w %<CR>| map! <buffer> <F2> <Esc> <F2>
+autocmd FileType python map <buffer> <F2> :w<CR> :!python -m py_compile % 2>&1<CR>| map! <buffer> <F2> <Esc> <F2>
+autocmd FileType html map <buffer> <F2> :w<CR> :! tidy -e -utf8 %<CR>| map! <buffer> <F2> <ESC><F2>
+autocmd FileType javascript map <buffer> <F2> :w<CR> :JSHint<CR> | map! <buffer> <F2> <ESC><F2>
 
 " helptags ~/.vim/doc
 
