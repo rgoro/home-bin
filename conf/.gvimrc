@@ -23,13 +23,4 @@ endif
 
 colo desert
 
-noremap <silent> <Leader>w :call ToggleWrap()<CR>
-function ToggleWrap()
-  if &wrap
-    map <Up> gk
-    map <Down> gj
-    imap <Up> <ESC>gka
-    imap <Down> <ESC>gja
-  endif
-endfunction
-
+set guifont=Monospace\ 12
