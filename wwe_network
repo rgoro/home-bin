@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+	streamlink http://network.wwe.com best --wwenetwork-email=rgorojovsky@gmail.com --wwenetwork-password=s0rru79
+else
+	streamlink $1 best --wwenetwork-email=rgorojovsky@gmail.com --wwenetwork-password=s0rru79
+fi
+
