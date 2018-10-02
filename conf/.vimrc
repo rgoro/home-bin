@@ -1,6 +1,7 @@
 " Configuration file for vim
 
 set runtimepath+=~/.vim/bundle/jshint2.vim/
+set runtimepath+=~/.vim/pack/plugin/start/tagbar
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
