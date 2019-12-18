@@ -1,8 +1,10 @@
 #!/bin/bash
 
+STREAMLINK='streamlink --wwenetwork-email=rgorojovsky@gmail.com --wwenetwork-password=s0rru79 --player-no-close' # --loglevel debug
+
 if [ -z $1 ]; then
-	streamlink http://network.wwe.com best --wwenetwork-email=rgorojovsky@gmail.com --wwenetwork-password=s0rru79
+	$STREAMLINK http://watch.wwe.com/channel/2026 best 
 else
-	streamlink $1 best --wwenetwork-email=rgorojovsky@gmail.com --wwenetwork-password=s0rru79
+	$STREAMLINK $1 best
 fi
 
