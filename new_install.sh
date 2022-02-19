@@ -1,28 +1,34 @@
 #!/bin/bash
 
-sudo apt-get update
+# Spotify
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo apt-get dist-upgrade -y
+sudo apt update
 
-sudo apt-get autoremove -y
+sudo apt dist-upgrade -y
+
+sudo apt autoremove -y
 
 #Basicos
-sudo apt-get install -y sl vim vim-gtk yakuake chromium-browser git ipython htop pidgin-plugin-pack filezilla chromium-codecs-ffmpeg-extra multitail exuberant-ctags tidy vim-addon-manager mc compizconfig-settings-manager
+sudo apt install -y sl google-chrome-stable chrome-gnome-shell vim vim-gtk yakuake git htop filezilla multitail exuberant-ctags vim-addon-manager mc compizconfig-settings-manager
 
 #Basicos II
-#sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite subversion
+sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite
+sudo apt install -y spotify-client
 
 # Solo para casa
-# sudo apt-get install -y youtube-dl lame easytag hugin mplayer calibre banshee
+sudo apt install -y youtube-dl vlc lame easytag hugin mplayer calibre clementine openjdk-16-jre openjdk-17-jre
+
+# Porque algodón
+sudo apt install -y g++ cmake valgrind
 
 #Activar el addon
-#vim-addons install latex-suite
+vim-addons install latex-suite
 
-#INRIA
-#sudo apt-get install -y g++ libjsoncpp-dev
+sudo snap install shotcut --classic
 
-#Skype
-#sudo apt-get install -y skype libasound2-plugins:i386
+sudo apt install -y
 
 if [ ! -d ~/bin ]; then
 	cd ~
@@ -33,18 +39,6 @@ git config --global user.email "rgorojovsky@gmail.com"
 git config --global user.name "Román Gorojovsky Sánchez"
 git config --global alias.ci commit
 git config --global alias.st status
-
-#Node.js y JsHint
-#sudo apt-get install npm -y
-#sudo ln -s /usr/bin/nodejs /usr/bin/node
-#sudo npm install -g jshint
-#
-#if ![ -d ~/.vim/bundle ]; then
-#	mkdir ~/.vim/bundle
-#fi
-#
-#cd ~/.vim/bundle/
-#git clone https://github.com/Shutnik/jshint2.vim.git
 
 
 cd ~
