@@ -113,4 +113,3 @@ map <C-F12> :!ctags-exuberant -R .<CR>
 
 autocmd FileType python map X :%s/	/    /g<CR>:w<CR>
 
-source ~/.vim/syntax/*.vim
