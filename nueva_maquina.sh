@@ -11,7 +11,7 @@ sudo apt dist-upgrade -y
 sudo apt autoremove -y
 
 #Basicos
-sudo apt install -y sl google-chrome-stable chrome-gnome-shell vim vim-gtk yakuake git htop filezilla multitail exuberant-ctags vim-addon-manager mc compizconfig-settings-manager
+sudo apt install -y sl bat google-chrome-stable chrome-gnome-shell vim vim-gtk yakuake git htop filezilla multitail exuberant-ctags vim-addon-manager mc compizconfig-settings-manager
 
 #Basicos II
 sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite
