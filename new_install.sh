@@ -15,10 +15,9 @@ sudo apt install -y sl google-chrome-stable chrome-gnome-shell vim vim-gtk yakua
 
 #Basicos II
 sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish vim-latexsuite
-sudo apt install -y spotify-client
 
 # Solo para casa
-sudo apt install -y youtube-dl vlc lame easytag hugin mplayer calibre clementine openjdk-16-jre openjdk-17-jre
+sudo apt install -y spotify-client youtube-dl vlc lame easytag hugin mplayer calibre clementine openjdk-16-jre openjdk-17-jre gimp
 
 # Porque algodón
 sudo apt install -y g++ cmake valgrind
