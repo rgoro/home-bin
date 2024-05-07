@@ -91,11 +91,8 @@ autocmd FileType haskell set textwidth=90
 autocmd BufNewFile,BufRead *.p6 setf perl6
 autocmd FileType perl6 source ~/.vim/perl6.vim
 autocmd FileType asm set tabstop=8 "| set filetype=nasm
-autocmd FileType tex set textwidth=100
+autocmd FileType tex set textwidth=0
  
-
-autocmd FileType tex set textwidth=100
-
 "otras compilaciones (chequeos de sintáxis sólamente)
 autocmd FileType c,cpp map <buffer> <F2> :w<CR> :!gcc -c -Wall %<CR>| map! <buffer> <F2> <Esc> <F2>
 autocmd FileType php map <buffer> <F2> :w<CR> :!php -l  %<CR>| map! <buffer> <F2> <Esc> <F2>
@@ -113,3 +110,4 @@ map <C-F12> :!ctags-exuberant -R .<CR>
 
 autocmd FileType python map X :%s/	/    /g<CR>:w<CR>
 
+ let g:tex_noindent_env = 'document\|verbatim\|lstlisting'

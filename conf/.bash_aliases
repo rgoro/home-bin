@@ -1,4 +1,5 @@
 alias grepp='grep --color -nR'
 alias egrepp='egrep --color -nR'
+alias bat='batcat'
 alias gvi='gvim'
 alias Df='df -h -t ext4 -t fuseblk'

@@ -99,6 +99,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export SVN_EDITOR=vim
-recetas 0
-
